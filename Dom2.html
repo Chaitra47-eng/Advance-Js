@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <!-- <input type="text"  name=""  id=""  placeholder="Username" class="inpField"> 
+   <br><br>
+   <input type="password"  name=""  id=""  placeholder="password" class="inpField">
+   <br><br>
+   <input type="email" name=""  id=""  placeholder="Email" class="inpField"><br><br>
+   <button onclick="getUserData()">GET DATA</button>
+
+   <script>
+    let getUserData = ()=>{
+        let inpFields = document.getElementsByClassName("inpField")
+        console.log(inpFields.value)
+
+
+        for (let i = 0; i< inpFields.length;i++){
+            console.log(inpFields[i].value)
+        }
+
+    } -->
+
+    
+   <!-- </script> -->
+   <!-- <storng>Select the skills : </storng> -->
+   <input type="checkbox" name="skills"  id="web"  value="Web-Tech"><label for="web">Web Tech</label>
+   <input type="checkbox" name="skills"  id="python"  value="Python"><label for="python">Python</label>
+   <input type="checkbox" name="skills"  id="SQL"  value="SQL"><label for="SQL">SQL</label>
+   <input type="checkbox" name="skills"  id="ReactJs"  value="ReactJS"><label for="ReactJS">ReactJs</label>
+   <br><br>
+   <button  type="button"  onclick="showSkills()">show Skills</button>
+   <strong id="strongEle">Select the skills</strong>
+  
+
+   <script>
+    function showSkills(){
+
+        let allSkills = document.getElementsByName("skills");
+        let strongEle = document.getElementById("strongEle")
+        let skillsArr = []
+
+
+        for(let i = 0; i < allSkills.length;i++){
+            if(allSkills[i].checked){
+                console.log(allSkills[i].value)
+                skillsArr.push(allSkills[i].value)
+              
+            }
+        }
+        console.log(skillsArr.join(","))
+        let resEle = skillsArr.join(",")
+
+        strongEle.textcontent = resEle
+        
+      
+    }
+   </script>
+
+</body>
+</html>

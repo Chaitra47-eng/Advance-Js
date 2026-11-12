@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    getElementsbyId()
+    <h1 onclick="change()"id="headEle">PYSPIDERS</h1>
+    <script>
+        function change(){
+            //fetching the element with the help of getelentbyid()
+            let headEle = document.getElementById("headEle")
+
+            //Acessing the HTML element in console
+            console.log(headEle)
+
+            //Accessing the content of the headEle in console
+            console.log(headEle.textContent)
+
+            //styling the  HTML element with the help of JS
+            headEle.style.color = "orange"
+
+            //changing the content
+            headEle.textContent = "JSPIDERS | BTM"
+        }
+        </script>
+        <hr>
+         <!--.value-->
+         <input type = "text" name="" id="inpEle"  placeholder="Username">
+         <button onclick="getUserData()">Get Data</button>
+         <h1>Username entered by user: <strong id="resEle"></strong></h1>
+
+
+         <textarea  id="feedback" placeholder="Feedback"></textarea>
+         <button onclick="showFeedback()">DISPLAY</button>
+         <h2>FEEDBACK:  <strong id="resFed"></strong></h2>
+         <script>
+             function getUserData() {
+                //fecting the input  element
+                let username = document.getElementById("inpEle")
+
+                //fetching the resEle to add the content from the input element
+                let result = document.getElementById("resEle")
+
+                //accesing the value of input element
+                let userName = username.value
+
+                //adding the input elemnet data as the value to the res element as the  text content
+                result.textContent = userName
+             }
+
+            function showFeedback(){
+                let feedback = document.getElementById("feedback")
+
+                let res = document.getElementById("resFed")
+
+                let userFeedback = feedback.value
+
+                result.textContent = userFeedback
+            }
+                
+                
+             
+            </script>
+
+          
+            
+
+         </body>
+</html>

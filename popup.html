@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--alert-->
+    <button onclick="show()">SHOW</button>
+    <script>
+        function show(){
+            alert("welcome to DOM")
+        }
+    </script>
+    <hr>
+    <button onclick="adddata()">ADD DATA</button>
+    <button onclick="removeData()">REMOVE DATA</button>
+
+    <script>
+        let adddata = ()=>{
+            let userResponse = confirm("DO YOU WANT TO CONTINUE")
+            let userName = prompt("Enter the username u want to store")
+            let Age = +prompt("Enter the age")
+            //console.log(userResponse)
+
+        if(userResponse){
+            //ADD the data in local storage if condition is true
+            //localStorage.setItem("username","Chaitra")
+            //localStorage.setItem("Age",20)
+            localStorage.setItem("username",userName)
+            localStorage.setItem("Age",Age)
+            console.log("DATA ADDED SUCCESSFULLY")
+        }else{
+            console.log("DATA NOT ADDED ")
+        }
+    }
+
+    function removeData(){
+        let userResponse2 = confirm("Do you want to remove the data")
+        if(userResponse2){
+            localStorage.removeItem("username")
+            localStorage.removeItem("Age")
+            alert("Data removed")
+        }else{
+            console.log("Data not removed")
+        }
+    }
+    
+    </script>
+    <hr>
+    <!--prompt-->
+    <button onclick="display">DISPLAY</button>
+    <script>
+        function display(){
+            let data = prompt("ENTER THE NAME")
+            console.log(data,typeof data)
+        }
+    </script>
+</body>
+</html>

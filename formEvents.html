@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--oninput,onblur,onfocus,onchange,onsubmit-->
+    <form action="">
+        <fieldset>
+            <label for="">Enter the username:</label><input type="text" name="" id="inpEle1"  oninput="getUsername()" onfocus="showPlaceholder1()" onblur="removePlaceholder()">
+
+            <br><br>
+
+            <label for="">Password: </label><input type="password" name="" id="passEle"  placeholder="password">
+        </fieldset>
+    </form>
+    <script>
+        let userEle = document.querySelector("#inpEle1")
+        let passwordEle = document.querySelector("#passEle")
+
+        function getUsername(){
+            console.log("Username:  ",inputEle.value.toUpperCase())
+
+            let updatedStr = userEle.value.toUpperCase()
+            userEle.value = updatedStr
+        }
+
+        let showPlaceholder1 = ()=>{
+            userEle.setAttribute("placeholder","username")
+        }
+        let removePlaceholder = ()=>{
+            userEle.removeAttribute("placeholder")
+        }
+    </script>
+
+    <!--onchange-->
+
+    <strong>select the domain:</strong>
+    <select name="" id="selectEles" onchange="getSelectedDomain()">
+        <option value="" hidden>----------choose Here-------</option>
+        <option value="Full Stack">Full Stack</option>
+        <option value="DataScience">DataScience</option>
+    </select>
+    <h1>Selected Domain: <strong id="resEle"></strong> </h1>
+    <script>
+        function getSelectedDomain(){
+            let elements = document.querySelector("#selectEles")
+            console.log("Selected Domain:",elements.value)
+            let selectedField = elements.value
+            resEle.textContent = selectedField
+        }
+    </script>
+
+    <!--onsubmit-->
+    <form action="" onsubmit="getUserData(event)">
+        <fieldset>
+            <input type="text" name="login" id="" placeholder="Username">
+            <input type="text" name="login" id="" placeholder="password">
+
+            <button type="submit">SUBMIT</button>
+        </fieldset>
+    </form>
+    <script>
+        let getUserData = (event) =>{
+            event.preventDefault()
+            let allData = document.getElementsByName("login")
+            for (let i = 0; i< allData.length;i++){
+                console.log(allData[i].value)
+            }
+        }
+    </script>
+</body>
+</html>

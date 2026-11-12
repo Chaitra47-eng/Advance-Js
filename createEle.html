@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>ADD ELEMENT</button>
+    <script>
+        //create an element
+        let headEle = document.createElement("h1")
+
+        //add the element
+        headEle.textContent = "Hello World"
+
+        console.log(headEle)
+
+        //adding the  content from js to HTML with the help of append()
+        document.body.append(headEle)
+    </script>
+</body>
+</html>

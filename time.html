@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .wrap{
+        width: 100%
+        height: 100vh
+        border: 3px solid black
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 20px
+        }
+        img{
+            width: 400px;
+            visibility: hidden;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="wrap">
+        <button onclick="display()">SHOW</button>
+        <img src="https://images.pexels.com/photos/38151730/pexels-photo-38151730.jpeg" alt="" id="imgEle">
+    </div>
+    <script>
+        let display = ()=>{
+            let imgEle = document.querySelector("#imgEle")
+            //console.log(imgEle)
+            //imgEle.style.visibility = "visible"
+            setTimeout(()=>{
+                imgEle.style.visibility = "visible"
+            },1000)
+        }
+    </script>
+</body>
+</html>
